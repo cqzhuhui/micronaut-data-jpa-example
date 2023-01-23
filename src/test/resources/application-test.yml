@@ -1,0 +1,18 @@
+datasources:
+  default:
+    url: jdbc:tc:postgresql:14.2:///customer?TC_REUSABLE=true
+    driverClassName: org.testcontainers.jdbc.ContainerDatabaseDriver
+    username: postgres
+    password: postgres
+    dialect: POSTGRES
+
+testcontainers:
+  reuse:
+    enable: true
+
+jpa:
+  default:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
